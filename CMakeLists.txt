@@ -46,14 +46,28 @@ if(APPLE OR WINDOWS)
     cocos_mark_multi_resources(common_res_files RES_TO "Resources" FOLDERS ${GAME_RES_FOLDER})
 endif()
 
-# add cross-platforms source files and header files 
+# add cross-platforms source files and header files
 list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
-     Classes/HelloWorldScene.cpp
+     Classes/Constants.cpp
+     Classes/configs/Config.cpp
+     Classes/views/GameScene.cpp
+     Classes/views/game/GameContainer.cpp
+     Classes/views/game/BackgroundContainer.cpp
+     Classes/views/game/ParallaxBackground.cpp
+     Classes/views/game/ParallaxForeground.cpp
+     Classes/views/game/Character.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
-     Classes/HelloWorldScene.h
+     Classes/Constants.h
+     Classes/configs/Config.h
+     Classes/views/GameScene.h
+     Classes/views/game/GameContainer.h
+     Classes/views/game/BackgroundContainer.h
+     Classes/views/game/ParallaxBackground.h
+     Classes/views/game/ParallaxForeground.h
+     Classes/views/game/Character.h
      )
 
 if(ANDROID)
